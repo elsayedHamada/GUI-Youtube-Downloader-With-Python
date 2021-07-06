@@ -13,6 +13,23 @@ class MainLoop(QMainWindow, FORM_CLASS):
         super(MainLoop, self).__init__(parent)
         QMainWindow.__init__(self)
         self.setupUi(self)
+        self.edit_ui()
+        self.connect_buttons()
+
+    def edit_ui(self):
+        self.setWindowTitle("SYDownloader")
+    
+    def connect_buttons(self):
+        self.getButton.clicked.connect(self.get_info)
+    
+    def get_info(self):
+        video_url = self.videURL.text()
+        title, rating, views, duration = "", "", "", ""
+        self.videoTitle.setText(title)
+        self.ratingVideo.setText(rating)
+        self.viewsVideo.setText(views)
+        self.durationVideo.setText(duration)
+    
 
 def main():
     app = QApplication(sys.argv)

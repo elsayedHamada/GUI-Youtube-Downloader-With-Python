@@ -4,7 +4,10 @@ from PyQt5.QtGui import *
 from PyQt5.uic import *
 import os
 import sys
-import pytube
+from pytube import YouTube
+
+# Main Varabiles
+
 
 FORM_CLASS,_ = loadUiType(os.path.join(os.path.dirname(__file__), "assets/DesignSYDownloader.ui"))
 
@@ -21,15 +24,21 @@ class MainLoop(QMainWindow, FORM_CLASS):
     
     def connect_buttons(self):
         self.getButton.clicked.connect(self.get_info)
+        self.close.clicked.connect(quit)
     
     def get_info(self):
-        video_url = self.videURL.text()
-        title, rating, views, duration = "", "", "", ""
-        self.videoTitle.setText(title)
-        self.ratingVideo.setText(rating)
-        self.viewsVideo.setText(views)
-        self.durationVideo.setText(duration)
-    
+        try:    
+            VIDEO_URL = self.videoURL.text()
+            VIDEO = YouTube(VIDEO_URL)
+            title, rating, views, duration = VIDEO.title, f"{round(VIDEO.rating, 1)} ⭐", f"{VIDEO.views} view", f"{round(VIDEO.length/60, 2)} min"
+            self.videoTitle.setText(title)
+            self.ratingVideo.setText(str(rating))
+            self.viewsVideo.setText(str(views))
+            self.durationVideo.setText(str(duration))
+            return
+        except Exception:
+            QMessageBox.warning(self, "SYDownloader", "Please Give a valid Url:)")
+
 
 def main():
     app = QApplication(sys.argv)

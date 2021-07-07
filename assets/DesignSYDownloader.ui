@@ -68,7 +68,7 @@ background: none;</string>
      <string>download from youtube</string>
     </property>
    </widget>
-   <widget class="QLineEdit" name="lineEdit">
+   <widget class="QLineEdit" name="videoURL">
     <property name="geometry">
      <rect>
       <x>120</x>
@@ -88,7 +88,7 @@ padding-left: 7px;</string>
      <string comment="10">Video URL..</string>
     </property>
    </widget>
-   <widget class="QLineEdit" name="lineEdit_2">
+   <widget class="QLineEdit" name="saveLocationVideo">
     <property name="geometry">
      <rect>
       <x>120</x>
@@ -108,7 +108,7 @@ padding-left: 7px;</string>
      <string comment="10">Save Location...</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton">
+   <widget class="QPushButton" name="browseButton">
     <property name="geometry">
      <rect>
       <x>680</x>
@@ -138,7 +138,7 @@ QPushButton:hover{
      <string>Browse</string>
     </property>
    </widget>
-   <widget class="QProgressBar" name="progressBar">
+   <widget class="QProgressBar" name="progressVideo">
     <property name="geometry">
      <rect>
       <x>120</x>
@@ -167,7 +167,7 @@ QProgressBar::chunk {
      <number>0</number>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_2">
+   <widget class="QPushButton" name="downloadButton">
     <property name="geometry">
      <rect>
       <x>390</x>
@@ -197,7 +197,7 @@ QPushButton:hover{
      <string>Download</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_3">
+   <widget class="QPushButton" name="close">
     <property name="geometry">
      <rect>
       <x>850</x>
@@ -227,7 +227,7 @@ QPushButton:hover{
      <string>X</string>
     </property>
    </widget>
-   <widget class="QComboBox" name="comboBox">
+   <widget class="QComboBox" name="qualityVideo">
     <property name="geometry">
      <rect>
       <x>120</x>
@@ -294,7 +294,7 @@ QComboBox::down-arrow
      <string>Quality...</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_4">
+   <widget class="QPushButton" name="getButton">
     <property name="geometry">
      <rect>
       <x>390</x>
@@ -324,7 +324,7 @@ QPushButton:hover{
      <string>Get Video</string>
     </property>
    </widget>
-   <widget class="QLineEdit" name="lineEdit_3">
+   <widget class="QLineEdit" name="videoTitle">
     <property name="geometry">
      <rect>
       <x>120</x>
@@ -347,7 +347,7 @@ padding-left: 7px;</string>
      <string comment="10">Title....</string>
     </property>
    </widget>
-   <widget class="QLineEdit" name="lineEdit_4">
+   <widget class="QLineEdit" name="ratingVideo">
     <property name="geometry">
      <rect>
       <x>120</x>
@@ -373,7 +373,7 @@ padding-left: 7px;</string>
      <string comment="10">Rating....</string>
     </property>
    </widget>
-   <widget class="QLineEdit" name="lineEdit_5">
+   <widget class="QLineEdit" name="viewsVideo">
     <property name="geometry">
      <rect>
       <x>350</x>
@@ -396,7 +396,7 @@ padding-left: 7px;</string>
      <string comment="10">Views...</string>
     </property>
    </widget>
-   <widget class="QLineEdit" name="lineEdit_6">
+   <widget class="QLineEdit" name="durationVideo">
     <property name="geometry">
      <rect>
       <x>570</x>

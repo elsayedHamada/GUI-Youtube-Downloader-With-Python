@@ -25,7 +25,12 @@ class MainLoop(QMainWindow, FORM_CLASS):
     def connect_buttons(self):
         self.getButton.clicked.connect(self.get_info)
         self.close.clicked.connect(quit)
-    
+        self.browseButton.clicked.connect(self.browse)
+
+    def browse(self):
+        save_location = QFileDialog.getExistingDirectory(self, "Save to")
+        self.saveLocationVideo.setText(save_location)
+
     def get_info(self):
         try:    
             VIDEO_URL = self.videoURL.text()
